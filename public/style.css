@@ -1,0 +1,235 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+  font-size: 14px;
+  color: #888;
+}
+h2{
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Cabecera */
+
+header{
+  border-bottom: 1px solid #f3f3f5;
+}
+header h1{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 15px 0;
+  color: #222;
+}
+header #botones{
+  display: flex;
+  justify-content: space-between;
+}
+header #botones button{
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 24px;
+}
+header #botones a{
+  color: #000;
+  padding: 5px;
+}
+header #search-box{
+  margin: 10px 0;
+}
+header #search-box input{
+  background: url("./img/search-icon.svg") no-repeat transparent left;
+  background-size: 10px;
+  background-position-x: 10px;
+  border: 1px solid #f3f3f4;
+  border-radius: 10px;
+  width: 100%;
+  padding: 5px;
+}
+
+/* Contenido principal */
+
+.titulo-seccion{
+  color: #222;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
+#articulo-top img:first-of-type(1){
+  height: 380px;
+  width: 380px;
+}
+main{
+  margin-top: 15px;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+}
+main article img{
+  margin-bottom: 30px;
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+}
+.info-articulo{
+  margin-bottom: 15px;
+}
+.categoria-articulo, .titulo-articulo{
+  color: #000;
+  font-weight: bold;
+}
+.titulo-articulo{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.autor-articulo{
+  display: flex;
+  margin-top: 30px;
+}
+.autor-articulo img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.autor-articulo-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.autor-articulo-info p:nth-of-type(1){
+  color: #000;
+  font-weight: 700;
+}
+
+/* Formulario newsletter */
+
+#formulario-newsletter{
+  display: flex;
+  flex-direction: column;
+  background: #f8f9fb;
+}
+#formulario-newsletter h3{
+  color: #000;
+}
+#formulario-newsletter form{
+  display: flex;
+  flex-direction: column;
+}
+#formulario-newsletter form input[type="email"]{
+  padding: 10px;
+  border: 1px solid #d8d9d9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+#formulario-newsletter form input[type="submit"]{
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  border: 1px solid #f7991a;
+  border-radius: 20px;
+  color: #fff;
+  background: #f7991a;
+}
+/* Footer */
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+footer span {
+  text-align: center;
+}
+footer #footer-social{
+  margin-bottom: 10px;
+}
+footer #footer-social button{
+  border: none;
+  background: #cccccd;
+  padding: 10px;
+  border-radius: 5px;
+}
+footer #footer-links a, footer #footer-links a:visited{
+  color: #f3f3f5;
+}
+
+/* Escritorio */
+
+@media (min-width: 1320px) {
+
+  body{
+    max-width: 1320px;
+  }
+
+  /* Cabecera */
+
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  header #titulo-botones{
+    display: flex;
+    align-items: center;
+  }
+  header #titulo-botones h1{
+    margin-right: 19vw;
+  }
+  header #titulo-botones #social{
+    margin-right: 100px;
+  }
+
+  /* Contenido principal */
+
+  main #articulo-top{
+    display: flex;
+    align-items: center;
+  }
+  main #articulo-top img:first-of-type(1){
+    width: 300px;
+    height: 300px;
+  }
+  main #articulo-top #texto{
+    margin: 20px;
+  }
+  /* Resto de articulos */
+
+  main section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+  }
+  #popular-posts{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+#formulario-newsletter{
+  height: 180px;
+  padding: 20px;
+}
+#formulario-newsletter form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #formulario-newsletter form input{
+    width: 50vw;
+    margin-right: 20px;
+  }
+}
